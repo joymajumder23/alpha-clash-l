@@ -27,8 +27,14 @@ if(playerPress === expectedAlphabet){
 else{
     console.log('You lost a life');
     // 1. get the current life number
+    const currentLifeElement = document.getElementById('current-life');
+    const currentLifeText = currentLifeElement.innerText;
+    const currentLife = parseInt(currentLifeText);
+    console.log(typeof currentLife);
     // 2. reduce the life count
+    const reduceLife = currentLife - 1;
     // 3. display the updated life count 
+    currentLifeElement.innerText = reduceLife;
 }
 }
 // function handleKeyboardButtonPress(){
