@@ -21,3 +21,7 @@ function getARandomAlphabets(){
     // console.log(alphabet, index);
     return alphabet;
 }
+function setBackgroundColor(setId){
+    const backgroundColor = document.getElementById(setId);
+    backgroundColor.classList.add('bg-orange-400');
+}

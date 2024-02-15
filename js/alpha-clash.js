@@ -5,6 +5,8 @@ function continueGame() {
     // Step-2: get genereted random alphabet to screen (show it) 
     const screenAlpha = document.getElementById('screen-alpha');
     screenAlpha.innerText = alphabet;
+    // Step-3: set background color
+    setBackgroundColor(alphabet);
 }
 function play() {
     // // console.log('Connected');
