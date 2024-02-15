@@ -1,9 +1,12 @@
-function continueGame(){
-    // Step-1: get a random alphabet generate
+function continueGame() {
+    // Step-1: get generate a random alphabet
     const alphabet = getARandomAlphabets();
     console.log(alphabet);
+    // Step-2: get genereted random alphabet to screen (show it) 
+    const screenAlpha = document.getElementById('screen-alpha');
+    screenAlpha.innerText = alphabet;
 }
-function play(){
+function play() {
     // // console.log('Connected');
     // const homeScreen = document.getElementById('home-screen')
     // // console.log(homeScreen.classList);
