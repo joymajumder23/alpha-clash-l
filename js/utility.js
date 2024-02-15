@@ -6,6 +6,14 @@ function showElementById(showElement){
     const show = document.getElementById(showElement);
     show.classList.remove('hidden');
 }
+function setBackgroundColor(setId){
+    const backgroundColor = document.getElementById(setId);
+    backgroundColor.classList.add('bg-orange-400');
+}
+function removeBackgroundColor(setId){
+    const backgroundColor = document.getElementById(setId);
+    backgroundColor.classList.remove('bg-orange-400');
+}
 function getARandomAlphabets(){
     //Step-1: get or create an array
     const alphabetString = 'abcdehghijklmnopqrstuvwxyz';
@@ -20,8 +28,4 @@ function getARandomAlphabets(){
     const alphabet = alphabets[index];
     // console.log(alphabet, index);
     return alphabet;
-}
-function setBackgroundColor(setId){
-    const backgroundColor = document.getElementById(setId);
-    backgroundColor.classList.add('bg-orange-400');
 }

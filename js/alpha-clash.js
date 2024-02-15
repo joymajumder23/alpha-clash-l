@@ -1,3 +1,26 @@
+function handelKeyboardKeyupEvent(event){
+    const playerPress = event.key;
+    console.log('player press:', playerPress);
+
+// get expected to press
+const currentAlphabetElement = document.getElementById('screen-alpha');
+const currentAlphabet = currentAlphabetElement.innerText;
+const expectedAlphabet = currentAlphabet.toLowerCase();
+console.log(playerPress, expectedAlphabet);
+// check matched or not
+if(playerPress === expectedAlphabet){
+    console.log('You got a point');
+    removeBackgroundColor(expectedAlphabet);
+    continueGame();
+}
+else{
+    console.log('You lost a life');
+}
+}
+// function handleKeyboardButtonPress(){
+//     console.log('Button Pressed');
+// }
+document.addEventListener('keyup', handelKeyboardKeyupEvent);
 function continueGame() {
     // Step-1: get generate a random alphabet
     const alphabet = getARandomAlphabets();
