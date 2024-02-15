@@ -10,11 +10,25 @@ console.log(playerPress, expectedAlphabet);
 // check matched or not
 if(playerPress === expectedAlphabet){
     console.log('You got a point');
+    // Update Score:
+    // 1. get the current score
+    const currentScoreElement = document.getElementById('current-score');
+    const currentScoreText = currentScoreElement.innerText;
+    const currentScore = parseInt(currentScoreText);
+    console.log(typeof currentScore);
+    // 2. increase the score by 1
+    const newScore = currentScore + 1;
+    // 3. show the update score
+    currentScoreElement.innerText = newScore;
+    // start a new round
     removeBackgroundColor(expectedAlphabet);
     continueGame();
 }
 else{
     console.log('You lost a life');
+    // 1. get the current life number
+    // 2. reduce the life count
+    // 3. display the updated life count 
 }
 }
 // function handleKeyboardButtonPress(){
